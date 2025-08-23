@@ -22,13 +22,13 @@ The Restaurant Finder Web App is a full-stack application built with React.js fo
 
 
 ## Features
-### Frontend Features
+### Frontend Features:
 - Restaurant Listings: View a list of all available restaurants with their details such as name, location, price range, and ratings.
 - Dynamic Rating Display: See average ratings for restaurants displayed using a star-rating system.
 - Review System: Add, view, and update reviews for restaurants.
 - Responsive Design: Optimized for desktop and mobile devices.
 
-### Backend Features
+### Backend Features:
 
 - API Integration: The backend is built with Node.js and handles all CRUD (Create, Read, Update, Delete) operations via RESTful APIs.
 - Database: Persistent storage of restaurant and review data using a relational database (e.g., PostgreSQL or MySQL).
