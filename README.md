@@ -33,3 +33,19 @@ The Restaurant Finder Web App is a full-stack application built with React.js fo
 - API Integration: The backend is built with Node.js and handles all CRUD (Create, Read, Update, Delete) operations via RESTful APIs.
 - Database: Persistent storage of restaurant and review data using a relational database (e.g., PostgreSQL or MySQL).
 - Validation: Ensures accurate data input when adding or updating restaurants and reviews.
+
+
+
+## Technologies Used
+
+### Frontend:
+- React.js: Used for building the user interface.
+- Bootstrap: For responsive styling and layout.
+- React Router: For navigation between different pages.
+
+
+### Backend:
+- Node.js: Handles the server-side logic.
+- Express.js: Used for creating RESTful APIs.
+- Database: Relational database (e.g., PostgreSQL/MySQL) to store and manage data.
+    Axios: For making HTTP requests from the frontend to the backend.
