@@ -30,7 +30,7 @@ Create a PostgreSQL database with `restaurants` and `reviews` tables. The backen
 - `restaurants`: `id`, `name`, `location`, `price_range`
 - `reviews`: `id`, `restaurant_id`, `name`, `review`, `rating`
 
-Create `back-end/server/env` (the file has no extension) with your PostgreSQL connection settings:
+Create `back-end/server/env` with your PostgreSQL connection settings:
 
 ```env
 PORT=3000
@@ -40,8 +40,6 @@ PGHOST=localhost
 PGPORT=5432
 PGDATABASE=your_database_name
 ```
-
-The `env` file is ignored by Git and should not be committed.
 
 ### 2. Install dependencies
 
@@ -63,21 +61,17 @@ In `back-end/server`:
 npm start
 ```
 
-The API listens on `http://localhost:3000` by default. The root endpoint can be used as a health check:
-
-```text
-GET http://localhost:3000/
-```
+The API listens on `http://localhost:3000` by default.
 
 ### 4. Start the frontend
 
-In a second terminal, from `front-end/frontend`:
+In a different terminal, from `front-end/frontend`:
 
 ```bash
 npm start
 ```
 
-The React development server opens at `http://localhost:3000` by default. If the backend is also using port `3000`, accept the prompt to run the frontend on another available port. The frontend API client currently targets `http://localhost:3000/api/v1/restaurants`, so update that base URL if the backend uses a different port.
+The React development server opens at `http://localhost:3000` by default.
 
 ## API Endpoints
 
