@@ -9,17 +9,15 @@ The Restaurant Finder Web App is a full-stack application built with React.js fo
 
 ### Home Page
 
-<img width="1918" height="974" alt="Home_Page" src="https://github.com/user-attachments/assets/091848a9-280b-430e-ab54-bcb79c6a4049" />
-
+<img width="1920" height="887" alt="Home_Page" src="https://github.com/user-attachments/assets/cd3efc05-424c-4416-95d7-5dc1d9b2dfa6" />
 
 ### Review Page
 
-<img width="1919" height="961" alt="Reviews_Page" src="https://github.com/user-attachments/assets/578c2f98-3ecb-4b86-8d76-657a5d4f6fe7" />
+<img width="1920" height="882" alt="Reviews_Page" src="https://github.com/user-attachments/assets/e5e8c020-4ed3-4627-8141-bdb6113e358c" />
 
 ### Update Page
 
-<img width="1919" height="969" alt="Update_Page" src="https://github.com/user-attachments/assets/ec6415ca-2a07-4ac4-a829-bae00bd6d83a" />
-
+<img width="1920" height="875" alt="Update_Page" src="https://github.com/user-attachments/assets/985ac8f5-3fad-41ca-a6d3-62f8f6d15e47" />
 
 ## Features
 ### Frontend Features:
@@ -49,3 +47,8 @@ The Restaurant Finder Web App is a full-stack application built with React.js fo
 - Express.js: Used for creating RESTful APIs.
 - Database: Relational database (e.g., PostgreSQL/MySQL) to store and manage data.
     Axios: For making HTTP requests from the frontend to the backend.
+
+
+### Visual Architectural Diagram
+
+<img width="7864" height="4069" alt="restaurant viewer diagram" src="https://github.com/user-attachments/assets/e364b547-fb9e-4aa3-88cf-bd3600583029" />
