@@ -77,7 +77,7 @@ The React development server opens at `http://localhost:3000` by default.
 
 All resource endpoints use the `/api/v1/restaurants` base path.
 
-| Method   | Endpoint                            | Description                        |
+| Method   | Endpoint Path                       | Description                        |
 | -------- | ----------------------------------- | ---------------------------------- |
 | `GET`    | `/api/v1/restaurants`               | List all restaurants               |
 | `GET`    | `/api/v1/restaurants/:id`           | Get one restaurant and its reviews |
