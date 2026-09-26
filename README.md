@@ -1,9 +1,114 @@
 # Restaurant Finder Web Application
 
+A full-stack restaurant directory built with React, Node.js, Express, and PostgreSQL. Users can browse restaurants, view ratings and reviews, add restaurants and reviews, update restaurant details, and delete restaurants.
 
-## Overview
+## Features
 
-The Restaurant Finder Web App is a full-stack application built with React.js for the front end and Node.js for the back end. This app allows users to explore, review, and manage restaurant listings seamlessly. It provides a user-friendly interface to view restaurant details (name, location, and price range), ratings, and reviews, while also enabling users to add, update, or delete restaurants and reviews.
+- Browse restaurants with their location, price range, review count, and average rating.
+- View a restaurant's details and reviews.
+- Add, update, and delete restaurants.
+- Add reviews with a 1-5 star rating.
+- Responsive React interface with Bootstrap styling and React Router navigation.
+
+## Technology Stack
+
+- Frontend: React 19, React Router, Bootstrap, and Axios.
+- Backend: Node.js, Express, CORS, Morgan, and dotenv.
+- Database: PostgreSQL, accessed through the `pg` package.
+
+## Requirements
+
+- Node.js and npm.
+- PostgreSQL.
+
+## Setup
+
+### 1. Configure PostgreSQL
+
+Create a PostgreSQL database with `restaurants` and `reviews` tables. The backend expects the following columns:
+
+- `restaurants`: `id`, `name`, `location`, `price_range`
+- `reviews`: `id`, `restaurant_id`, `name`, `review`, `rating`
+
+Create `back-end/server/env` (the file has no extension) with your PostgreSQL connection settings:
+
+```env
+PORT=3000
+PGUSER=your_postgres_user
+PGPASSWORD=your_postgres_password
+PGHOST=localhost
+PGPORT=5432
+PGDATABASE=your_database_name
+```
+
+The `env` file is ignored by Git and should not be committed.
+
+### 2. Install dependencies
+
+From the repository root, install dependencies for both applications:
+
+```bash
+cd back-end/server
+npm install
+
+cd ../../front-end/frontend
+npm install
+```
+
+### 3. Start the backend
+
+In `back-end/server`:
+
+```bash
+npm start
+```
+
+The API listens on `http://localhost:3000` by default. The root endpoint can be used as a health check:
+
+```text
+GET http://localhost:3000/
+```
+
+### 4. Start the frontend
+
+In a second terminal, from `front-end/frontend`:
+
+```bash
+npm start
+```
+
+The React development server opens at `http://localhost:3000` by default. If the backend is also using port `3000`, accept the prompt to run the frontend on another available port. The frontend API client currently targets `http://localhost:3000/api/v1/restaurants`, so update that base URL if the backend uses a different port.
+
+## API Endpoints
+
+All resource endpoints use the `/api/v1/restaurants` base path.
+
+| Method   | Endpoint                            | Description                        |
+| -------- | ----------------------------------- | ---------------------------------- |
+| `GET`    | `/api/v1/restaurants`               | List all restaurants               |
+| `GET`    | `/api/v1/restaurants/:id`           | Get one restaurant and its reviews |
+| `POST`   | `/api/v1/restaurants`               | Create a restaurant                |
+| `PUT`    | `/api/v1/restaurants/:id`           | Update a restaurant                |
+| `DELETE` | `/api/v1/restaurants/:id`           | Delete a restaurant                |
+| `POST`   | `/api/v1/restaurants/:id/addReview` | Add a review                       |
+
+## Project Structure
+
+```text
+back-end/server/
+    server.js              Express API and routes
+    database/index.js      PostgreSQL connection pool
+    package.json
+
+front-end/frontend/
+    src/
+        apis/                 Axios API client
+        components/           Reusable React components
+        context/              Restaurant state context
+        pages/                Application pages
+        routes/               Route-level components
+    package.json
+```
 
 ## Screenshots
 
@@ -19,36 +124,6 @@ The Restaurant Finder Web App is a full-stack application built with React.js fo
 
 <img width="1920" height="875" alt="Update_Page" src="https://github.com/user-attachments/assets/985ac8f5-3fad-41ca-a6d3-62f8f6d15e47" />
 
-## Features
-### Frontend Features:
-- Restaurant Listings: View a list of all available restaurants with their details such as name, location, price range, and ratings.
-- Dynamic Rating Display: See average ratings for restaurants displayed using a star-rating system.
-- Review System: Add, view, and update reviews for restaurants.
-- Responsive Design: Optimized for desktop and mobile devices.
-
-### Backend Features:
-
-- API Integration: The backend is built with Node.js and handles all CRUD (Create, Read, Update, Delete) operations via RESTful APIs.
-- Database: Persistent storage of restaurant and review data using a relational database (e.g., PostgreSQL or MySQL).
-- Validation: Ensures accurate data input when adding or updating restaurants and reviews.
-
-
-
-## Technologies Used
-
-### Frontend:
-- React.js: Used for building the user interface.
-- Bootstrap: For responsive styling and layout.
-- React Router: For navigation between different pages.
-
-
-### Backend:
-- Node.js: Handles the server-side logic.
-- Express.js: Used for creating RESTful APIs.
-- Database: Relational database (e.g., PostgreSQL/MySQL) to store and manage data.
-    Axios: For making HTTP requests from the frontend to the backend.
-
-
-### Visual Architectural Diagram
+## Architecture
 
 <img width="7864" height="4069" alt="restaurant viewer diagram" src="https://github.com/user-attachments/assets/e364b547-fb9e-4aa3-88cf-bd3600583029" />
