@@ -41,7 +41,7 @@ app.get("/api/v1/restaurants", async (req, res) => {
 
 
 
-// get a individual restaurant
+// get an individual restaurant
 app.get("/api/v1/restaurants/:id", async (req, res) => {
 
     try{
@@ -64,6 +64,7 @@ app.get("/api/v1/restaurants/:id", async (req, res) => {
 });
 
 
+// Create a restaurant
 app.post("/api/v1/restaurants", async (req, res) => {
 
     try{
@@ -119,6 +120,7 @@ app.delete("/api/v1/restaurants/:id", async (req, res) => {
     }
 });
 
+//add a review for a restaurant
 app.post("/api/v1/restaurants/:id/addReview", async (req, res) => {
     try{
         const results = await dp.query("INSERT INTO reviews (restaurant_id, name, review, rating) values ($1,$2,$3,$4) RETURNING *", [req.params.id,req.body.name,req.body.review,req.body.rating]); //we add returning * to return an output to the results
